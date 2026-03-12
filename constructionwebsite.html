@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="constructionwebsite.css">
+
+    <title>Construction Field App</title>
+
+</head>
+
+<body>
+
+    <div class="background">
+
+        <div class="container">
+
+            <!-- LOGIN SECTION 1 st page  -->
+
+            <div id="loginSection">
+
+                <div class="login-box">
+
+                    <h3 class="text-center">Login</h3>
+
+                    <input class="form-control input-box" id="email" placeholder="Enter Email">
+
+                    <input class="form-control input-box" type="password" id="password" placeholder="Enter Password">
+
+                    <button class="btn btn-primary btn-block" onclick="login()">
+                        Login
+                    </button>
+                    <p id="error" class="text-danger mt-2"></p>
+
+                </div>
+
+            </div>
+
+
+            <!-- DASHBOARD SECTION 2nd page -->
+
+            <div id="dashboardSection" class="d-none">
+
+                <h2 class="title">Project Dashboard</h2>
+
+                <div class="row">
+
+                    <div class="col-12 col-md-6 col-lg-4">
+
+                        <div class="card-box" onclick="openDPR()">
+
+                            <h5>Bridge Construction</h5>
+
+                            <p>Status: Active</p>
+
+                            <p>Location: Mumbai</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-4">
+
+                        <div class="card-box" onclick="openDPR()">
+
+                            <h5>Road Expansion</h5>
+
+                            <p>Status: Completed</p>
+
+                            <p>Location: Pune</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-4">
+
+                        <div class="card-box" onclick="openDPR()">
+
+                            <h5>Mall Building</h5>
+
+                            <p>Status: Pending</p>
+
+                            <p>Location: Nashik</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DPR SECTION 3rd page-->
+
+            <div id="dprSection" class="d-none">
+
+                <div class="dpr-box">
+
+                    <h4>Daily Progress Report</h4>
+
+                    <input type="date" class="form-control input-box" id="date">
+
+                    <select class="form-control input-box" id="weather">
+
+                        <option value="">Select Weather</option>
+
+                        <option>Sunny</option>
+                        <option>Cloudy</option>
+                        <option>Rainy</option>
+
+                    </select>
+
+                    <textarea class="form-control input-box" id="description" placeholder="Work Description"></textarea>
+
+                    <input type="number" class="form-control input-box" id="workers" placeholder="Worker Count">
+
+                    <input type="file" class="form-control input-box" id="images" multiple>
+
+                    <div id="preview"></div>
+
+                    <button class="btn btn-success mt-2" onclick="submitDPR()">
+
+                        Submit
+
+                    </button>
+
+                    <button class="btn btn-secondary mt-2" onclick="showDashboard()">
+
+                        Back
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="constructionwebsite.css"></script>
+
+</body>
+
+</html>
